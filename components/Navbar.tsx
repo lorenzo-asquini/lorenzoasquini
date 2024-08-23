@@ -98,12 +98,14 @@ export default function Navbar() {
                             onClick={closeDropdown}>
                             HOME
                         </Link>
+                        {/* //TODO
                         <Link
                             href="/posts/"
                             className="w-full border p-4 border-gray-700 hover:bg-gray-700"
                             onClick={closeDropdown}>
                             POSTS
                         </Link>
+                        */}
                         <Link
                             href="/contact/"
                             className="w-full border-b p-4 hover:bg-gray-700"

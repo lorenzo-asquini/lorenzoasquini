@@ -9,7 +9,8 @@ export default function WorkExperience() {
         companyName: 'Synthara',
         companyWebsiteUrl: 'https://synthara.ai/',
         location: 'Zürich, CH',
-        jobPosition: 'Software Engineer Intern',
+        jobTitle: 'Software Engineer Intern',
+        employmentType: 'Internship',
         startDate: 'June 2020',
         endDate: 'Present',
         tasks: [
@@ -25,7 +26,8 @@ export default function WorkExperience() {
                 companyName={syntharaInternJob.companyName}
                 companyWebsiteUrl={syntharaInternJob.companyWebsiteUrl}
                 location={syntharaInternJob.location}
-                jobPosition={syntharaInternJob.jobPosition}
+                jobTitle={syntharaInternJob.jobTitle}
+                employmentType={syntharaInternJob.employmentType}
                 startDate={syntharaInternJob.startDate}
                 endDate={syntharaInternJob.endDate}
                 tasks={syntharaInternJob.tasks}

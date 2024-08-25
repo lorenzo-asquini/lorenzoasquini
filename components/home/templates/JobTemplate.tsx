@@ -7,7 +7,8 @@ interface JobProps {
     companyWebsiteUrl: string;
     location: string;
 
-    jobPosition: string;
+    jobTitle: string;
+    employmentType: string;
     startDate: string;
     endDate: string;
 
@@ -19,7 +20,8 @@ export default function JobTemplate({
     companyName,
     companyWebsiteUrl,
     location,
-    jobPosition,
+    jobTitle,
+    employmentType,
     startDate,
     endDate,
     tasks,
@@ -40,10 +42,10 @@ export default function JobTemplate({
                         {companyName}
                     </a>
                     <p className="text-gray-700">
-                        <span className="font-semibold">{jobPosition}</span> ({location})
+                        <span className="font-semibold">{jobTitle}</span> ({location})
                     </p>
                     <p className="text-gray-500 mb-2">
-                        {startDate} - {endDate}
+                        {employmentType} | {startDate} - {endDate}
                     </p>
                     <ul className="list-disc text-gray-700 space-y-2 ml-3">
                         {tasks.map((task, index) => (

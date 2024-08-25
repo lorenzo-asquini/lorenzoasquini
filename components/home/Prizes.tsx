@@ -15,7 +15,7 @@ export default function Prizes() {
         year: '2022',
         issuer: 'Università degli Studi di Padova, Padua, Italy',
         description:
-            'Prize awarded to the top 3% of Computer Engineering bachelor’s students, out of approximately 1,300 students.',
+            'Prize awarded to the top 3% of Computer Engineering bachelor’s students, out of approximately 900 students.',
     };
 
     return (

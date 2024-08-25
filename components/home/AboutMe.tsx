@@ -11,14 +11,14 @@ export default function AboutMe() {
                     ETH Zurich
                 </a>
                 , pursuing a major in Data Management Systems and a minor in Information Security.
-                <br className="mb-3" />I am interested in High Performance Computing, specifically focusing on the
+                <br className="mb-4" />I am interested in High Performance Computing, with a focus on the
                 Processing-In-Memory (PIM) paradigm, regarding which I had the pleasure to collaborate with the{' '}
                 <a href="https://safari.ethz.ch/" className="text-blue-600 hover:text-blue-800">
                     SAFARI Research Group
                 </a>
-                . My work centers on hardware-software co-design, aiming to optimize integration for improved processing
+                . My work focuses on software engineering, optimizing integration with hardware to improve processing
                 efficiency and speed.
-                <br className="mb-3" />I currently work at
+                <br className="mb-4" />I currently work at
                 <a href="https://synthara.ai/" className="text-blue-600 hover:text-blue-800">
                     {' '}
                     Synthara

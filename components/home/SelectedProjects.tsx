@@ -9,7 +9,7 @@ export default function SelectedProjects() {
                 <a href="https://acl.inf.ethz.ch/teaching/fastcode/2024/" className="text-blue-600 hover:text-blue-800">
                     Advanced Systems Lab
                 </a>{' '}
-                course at ETH Zürich, we optimized the performance of a Ternary Neural Network from the
+                course at ETH Zürich, we optimized the performance of a Ternary Neural Network from the{' '}
                 <a href="https://dl.acm.org/doi/full/10.1145/3508390" className="text-blue-600 hover:text-blue-800">
                     TAB inference method
                 </a>{' '}
@@ -25,7 +25,7 @@ export default function SelectedProjects() {
                             className="text-blue-600 hover:text-blue-800">
                             Skiver
                         </a>{' '}
-                        - An arcade game developed in Java
+                        - An arcade game developed in Java.
                     </li>
                     <li>
                         <a

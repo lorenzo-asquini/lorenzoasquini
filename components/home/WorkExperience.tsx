@@ -11,8 +11,8 @@ export default function WorkExperience() {
         location: 'Zürich, CH',
         jobTitle: 'Software Engineer Intern',
         employmentType: 'Internship',
-        startDate: 'June 2020',
-        endDate: 'Present',
+        startDate: 'June 2024',
+        endDate: 'September 2024',
         tasks: [
             'I worked on implementing and integrating multiple features in a functional simulation model to accurately replicate custom hardware behavior.',
             'I was responsible for designing, implementing, and deploying automated tests to verify the proper functionality of custom hardware.',

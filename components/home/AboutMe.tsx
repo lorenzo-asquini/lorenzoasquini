@@ -18,13 +18,6 @@ export default function AboutMe() {
                 </a>
                 . My work focuses on software engineering, optimizing integration with hardware to improve processing
                 efficiency and speed.
-                <br className="mb-4" />I currently work at
-                <a href="https://synthara.ai/" className="text-blue-600 hover:text-blue-800">
-                    {' '}
-                    Synthara
-                </a>
-                , a startup based in Zurich developing a SRAM memory drop-in replacement with in-memory computing
-                capabilities.
             </WhiteBoxTemplate>
         </SectionTemplate>
     );

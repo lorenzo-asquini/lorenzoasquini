@@ -14,8 +14,8 @@ export default function WorkExperience() {
         startDate: 'June 2024',
         endDate: 'September 2024',
         tasks: [
-            'I worked on implementing and integrating multiple features in a functional simulation model to accurately replicate custom hardware behavior.',
-            'I was responsible for designing, implementing, and deploying automated tests to verify the proper functionality of custom hardware.',
+            'I worked on implementing and integrating multiple features in a functional simulation model written in C++ to accurately replicate custom hardware behavior.',
+            'I was responsible for designing, implementing, and deploying automated tests written in C++ to verify the proper functionality of custom hardware.',
         ],
     };
 

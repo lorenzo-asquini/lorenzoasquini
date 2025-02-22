@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+
 import Image from 'next/image';
 import WhiteBoxTemplate from '../../WhiteBoxTemplate';
 
@@ -30,8 +32,8 @@ export default function JobTemplate({
         <WhiteBoxTemplate>
             <div className="flex">
                 {/* The margin right must be the same as the padding in WhiteBoxTemplate*/}
-                <div className="w-14 h-14 sm:w-10 sm:h-10 mr-4 mt-2">
-                    <Image priority src={companyLogoSrc} alt={companyName} />
+                <div className="w-10 h-10 sm:w-8 sm:h-8 mr-4 mt-2 flex-shrink-0 relative">
+                    <Image priority src={companyLogoSrc} alt={companyName} fill />
                 </div>
                 <div>
                     <a
@@ -49,7 +51,14 @@ export default function JobTemplate({
                     </p>
                     <ul className="list-disc text-gray-700 space-y-2 ml-3">
                         {tasks.map((task, index) => (
-                            <li key={index}>{task}</li>
+                            <li key={index}>
+                                {task.split('C++').map((part, i, arr) => (
+                                    <Fragment key={i}>
+                                        {part}
+                                        {i < arr.length - 1 && <span className="whitespace-nowrap">C++</span>}
+                                    </Fragment>
+                                ))}
+                            </li>
                         ))}
                     </ul>
                 </div>

@@ -9,9 +9,10 @@ export default function Education() {
         endDate: 'Present',
         relevantCourses: [
             'Advanced Systems Lab',
-            'Algorithms Lab',
             'Cloud Computing Architecture',
+            'Compiler Design',
             'Computer Architecture',
+            'Design of Parallel and High-Performance Computing',
         ],
     };
 

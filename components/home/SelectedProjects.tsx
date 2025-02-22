@@ -4,6 +4,14 @@ import ProjectTemplate from './templates/ProjectTemplate';
 export default function SelectedProjects() {
     return (
         <SectionTemplate title="Selected Projects">
+            <ProjectTemplate title="Analyzing the Impact of RowClone Operations on RowHammer Attack Amplification">
+                In collaboration with the{' '}
+                <a href="https://safari.ethz.ch/" className="text-blue-600 hover:text-blue-800">
+                    SAFARI Research Group
+                </a>
+                , I investigated how the Processing-Using-Memory operation RowClone can amplify the RowHammer attack.
+            </ProjectTemplate>
+
             <ProjectTemplate title="Optimizing a Ternary Neural Network for single-core performance on x86-64 CPUs">
                 As part of a group project for the{' '}
                 <a href="https://acl.inf.ethz.ch/teaching/fastcode/2024/" className="text-blue-600 hover:text-blue-800">

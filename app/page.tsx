@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             */}
 
-            <Footer lastModified="2024-09-15"></Footer>
+            <Footer lastModified="2025-02-22"></Footer>
         </div>
     );
 }

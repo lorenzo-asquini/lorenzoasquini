@@ -1,9 +1,21 @@
 import SectionTemplate from './templates/SectionTemplate';
 import JobTemplate from './templates/JobTemplate';
 
+import ETHLogo from './images/ETHLogo.svg';
 import SyntharaLogo from './images/SyntharaLogo.svg';
 
 export default function WorkExperience() {
+    const ethTAJob = {
+        companyLogoSrc: ETHLogo,
+        companyName: 'ETH Zürich',
+        companyWebsiteUrl: 'https://ethz.ch/',
+        location: 'Zürich, CH',
+        jobTitle: 'Student Teaching Assistant',
+        employmentType: 'Part-time',
+        startDate: 'February 2025',
+        endDate: 'Present',
+        tasks: ['Student Teaching Assistant in the Advanced Systems Lab course.'],
+    };
     const syntharaInternJob = {
         companyLogoSrc: SyntharaLogo,
         companyName: 'Synthara',
@@ -21,6 +33,18 @@ export default function WorkExperience() {
 
     return (
         <SectionTemplate title="Work Experience">
+            <JobTemplate
+                companyLogoSrc={ethTAJob.companyLogoSrc}
+                companyName={ethTAJob.companyName}
+                companyWebsiteUrl={ethTAJob.companyWebsiteUrl}
+                location={ethTAJob.location}
+                jobTitle={ethTAJob.jobTitle}
+                employmentType={ethTAJob.employmentType}
+                startDate={ethTAJob.startDate}
+                endDate={ethTAJob.endDate}
+                tasks={ethTAJob.tasks}
+            />
+
             <JobTemplate
                 companyLogoSrc={syntharaInternJob.companyLogoSrc}
                 companyName={syntharaInternJob.companyName}

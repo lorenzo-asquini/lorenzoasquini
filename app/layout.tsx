@@ -5,7 +5,7 @@ import Navbar from '@components/Navbar';
 
 export const metadata = {
     title: 'Lorenzo Asquini',
-    description: 'Student at ETH Zürich, Software Engineer at Synthara',
+    description: 'Student at ETH Zürich',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

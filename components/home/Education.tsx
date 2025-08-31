@@ -6,10 +6,9 @@ export default function Education() {
         educationType: 'Master in Computer Science',
         place: 'ETH Zürich, Zürich, Switzerland',
         startDate: 'September 2023',
-        endDate: 'Present',
+        endDate: '2026',
         relevantCourses: [
             'Advanced Systems Lab',
-            'Cloud Computing Architecture',
             'Compiler Design',
             'Computer Architecture',
             'Design of Parallel and High-Performance Computing',

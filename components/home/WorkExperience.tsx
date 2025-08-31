@@ -1,10 +1,24 @@
 import SectionTemplate from './templates/SectionTemplate';
 import JobTemplate from './templates/JobTemplate';
 
+import OptiverLogo from './images/OptiverLogo.svg';
 import ETHLogo from './images/ETHLogo.svg';
 import SyntharaLogo from './images/SyntharaLogo.svg';
 
 export default function WorkExperience() {
+    const optiverInternJob = {
+        companyLogoSrc: OptiverLogo,
+        companyName: 'Optiver',
+        companyWebsiteUrl: 'https://optiver.com//',
+        location: 'Amsterdam, NL',
+        jobTitle: 'Software Engineer Intern',
+        employmentType: 'Internship',
+        startDate: 'July 2025',
+        endDate: 'August 2025',
+        tasks: [
+            'I worked on designing and implementing a server to automate trade confirmations using the FIX protocol, improving efficiency and reducing errors in trade handling.',
+        ],
+    };
     const ethTAJob = {
         companyLogoSrc: ETHLogo,
         companyName: 'ETH Zürich',
@@ -13,8 +27,10 @@ export default function WorkExperience() {
         jobTitle: 'Student Teaching Assistant',
         employmentType: 'Part-time',
         startDate: 'February 2025',
-        endDate: 'Present',
-        tasks: ['Student Teaching Assistant in the Advanced Systems Lab course.'],
+        endDate: 'May 2025',
+        tasks: [
+            'I was responsible for helping prepare and grade homework assignments for the Advanced Systems Lab course.',
+        ],
     };
     const syntharaInternJob = {
         companyLogoSrc: SyntharaLogo,
@@ -33,6 +49,18 @@ export default function WorkExperience() {
 
     return (
         <SectionTemplate title="Work Experience">
+            <JobTemplate
+                companyLogoSrc={optiverInternJob.companyLogoSrc}
+                companyName={optiverInternJob.companyName}
+                companyWebsiteUrl={optiverInternJob.companyWebsiteUrl}
+                location={optiverInternJob.location}
+                jobTitle={optiverInternJob.jobTitle}
+                employmentType={optiverInternJob.employmentType}
+                startDate={optiverInternJob.startDate}
+                endDate={optiverInternJob.endDate}
+                tasks={optiverInternJob.tasks}
+            />
+
             <JobTemplate
                 companyLogoSrc={ethTAJob.companyLogoSrc}
                 companyName={ethTAJob.companyName}

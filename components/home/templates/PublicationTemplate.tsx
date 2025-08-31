@@ -2,19 +2,25 @@ import { Fragment } from 'react';
 
 import WhiteBoxTemplate from '../../WhiteBoxTemplate';
 
-interface PublicationProps {
-    title: string;
+interface Venue {
+    name: string;
     link: string;
-    authors: { name: string; isHighlighted?: boolean }[];
-    conferenceName: string;
 }
 
-export default function PublicationTemplate({ title, link, authors, conferenceName }: PublicationProps) {
+interface PublicationProps {
+    title: string;
+    authors: { name: string; isHighlighted?: boolean }[];
+    venues: Venue[];
+}
+
+export default function PublicationTemplate({ title, authors, venues }: PublicationProps) {
+    const primaryLink = venues[0].link;
+
     return (
         <WhiteBoxTemplate>
             <div className="mb-1">
                 <a
-                    href={link}
+                    href={primaryLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-blue-600 hover:underline">
@@ -30,9 +36,18 @@ export default function PublicationTemplate({ title, link, authors, conferenceNa
                 ))}
             </div>
             <div>
-                <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
-                    {conferenceName}
-                </a>
+                {venues.map((venue, index) => (
+                    <span key={venue.link}>
+                        <a
+                            href={venue.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-700 hover:underline">
+                            {venue.name}
+                        </a>
+                        {index < venues.length - 1 && <span className="p-2 text-gray-700">|</span>}
+                    </span>
+                ))}
             </div>
         </WhiteBoxTemplate>
     );

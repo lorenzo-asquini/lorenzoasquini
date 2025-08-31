@@ -38,7 +38,7 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav ref={navbarRef} className="fixed top-0 w-full bg-gray-800 text-white h-16 z-100">
+            <nav ref={navbarRef} className="fixed top-0 w-full bg-gray-800 text-white h-16 z-50">
                 <div className="mx-auto flex justify-between items-center p-4">
                     <Link href="/" className="text-2xl font-bold">
                         Lorenzo Asquini

@@ -16,9 +16,7 @@ export default function Home() {
             <PhotoContacts />
             <AboutMe />
             <WorkExperience />
-            {/* //TODO: 
-                <Publications />
-            */}
+            <Publications />
             <Education />
             <Prizes />
             <SelectedProjects />
@@ -34,7 +32,7 @@ export default function Home() {
             </div>
             */}
 
-            <Footer lastModified="2025-02-22"></Footer>
+            <Footer lastUpdated="2025-08-31"></Footer>
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function WorkExperience() {
         startDate: 'July 2025',
         endDate: 'August 2025',
         tasks: [
-            'I worked on designing and implementing a server to automate trade confirmations using the FIX protocol, improving efficiency and reducing errors in trade handling.',
+            'I worked on designing and implementing a server to automate trade confirmations using the FIX protocol, saving tens of minutes daily and reducing errors in trade handling.',
         ],
     };
     const ethTAJob = {
@@ -42,8 +42,8 @@ export default function WorkExperience() {
         startDate: 'June 2024',
         endDate: 'September 2024',
         tasks: [
-            'I worked on implementing and integrating multiple features in a functional simulation model written in C++ to accurately replicate custom hardware behavior.',
-            'I was responsible for designing, implementing, and deploying automated tests written in C++ to verify the proper functionality of custom hardware.',
+            "I worked on implementing and integrating multiple features in a functional simulation model written in C++ to accurately replicate Synthara's custom hardware behavior.",
+            "I was responsible for designing, implementing, and deploying automated tests written in C++ to verify the proper functionality of Synthara's custom hardware.",
         ],
     };
 

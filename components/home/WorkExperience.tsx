@@ -27,7 +27,7 @@ export default function WorkExperience() {
         jobTitle: 'Student Teaching Assistant',
         employmentType: 'Part-time',
         startDate: 'February 2025',
-        endDate: 'May 2025',
+        endDate: 'June 2025',
         tasks: [
             'I was responsible for helping prepare and grade homework assignments for the Advanced Systems Lab course.',
         ],

@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             */}
 
-            <Footer lastUpdated="2025-08-31"></Footer>
+            <Footer lastUpdated="2026-01-30"></Footer>
         </div>
     );
 }

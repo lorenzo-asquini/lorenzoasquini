@@ -33,7 +33,7 @@ export function JobItem({
     return (
         <Card>
             <div className="flex gap-4">
-                <div className="relative size--8 mt-1 shrink-0">
+                <div className="relative size-8 mt-1 shrink-0">
                     <Image priority src={companyLogoSrc} alt="" fill className="object-contain object-left" />
                 </div>
                 <div className="min-w-0">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars -- Link and Posts back the commented-out posts section below. */
 import Link from 'next/link';
 
 import PhotoContacts from '@components/home/PhotoContacts';

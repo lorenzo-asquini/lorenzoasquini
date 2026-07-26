@@ -34,6 +34,7 @@ export default function Education() {
     };
 
     // Leaving this here even though it is not displayed
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const highSchool = {
         educationType: 'High School Diploma',
         place: 'Liceo Scientifico Niccolò Copernico, Udine, Italy',

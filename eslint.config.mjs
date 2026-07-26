@@ -1,11 +1,9 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-import js from '@eslint/js';
 import next from 'eslint-config-next/core-web-vitals';
 import nextTypescript from 'eslint-config-next/typescript';
 
 export default defineConfig([
     globalIgnores(['.next/**', 'out/**', 'build/**', 'node_modules/**', 'next-env.d.ts']),
-    js.configs.recommended,
     next,
     nextTypescript,
     {

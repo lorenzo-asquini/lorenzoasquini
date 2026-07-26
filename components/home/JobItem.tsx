@@ -2,9 +2,10 @@ import { Fragment } from 'react';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
-import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
+import { Card } from '@components/ui/Card';
+import { ExternalLink } from '@components/ui/ExternalLink';
 
-export interface JobTemplateProps {
+export interface JobItemProps {
     companyLogoSrc: string | StaticImageData;
     companyName: string;
     companyWebsiteUrl: string;
@@ -18,7 +19,7 @@ export interface JobTemplateProps {
     tasks: string[];
 }
 
-export function JobTemplate({
+export function JobItem({
     companyLogoSrc,
     companyName,
     companyWebsiteUrl,
@@ -28,22 +29,23 @@ export function JobTemplate({
     startDate,
     endDate,
     tasks,
-}: JobTemplateProps) {
+}: JobItemProps) {
     return (
-        <WhiteBoxTemplate>
-            <div className="flex">
-                {/* The margin right must be the same as the padding in WhiteBoxTemplate*/}
-                <div className="w-10 h-10 sm:w-8 sm:h-8 mr-4 mt-2 flex-shrink-0 relative">
-                    <Image priority src={companyLogoSrc} alt={companyName} fill />
+        <Card>
+            <div className="flex gap-4">
+                <div className="size-8 mt-2 flex-shrink-0 relative">
+                    <Image
+                        priority
+                        src={companyLogoSrc}
+                        alt={companyName}
+                        fill
+                        className="object-contain object-left"
+                    />
                 </div>
                 <div>
-                    <a
-                        href={companyWebsiteUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xl font-bold text-blue-600 hover:underline">
+                    <ExternalLink href={companyWebsiteUrl} className="text-xl font-bold text-blue-600 hover:underline">
                         {companyName}
-                    </a>
+                    </ExternalLink>
                     <p className="text-gray-700">
                         <span className="font-semibold">{jobTitle}</span> ({location})
                     </p>
@@ -64,6 +66,6 @@ export function JobTemplate({
                     </ul>
                 </div>
             </div>
-        </WhiteBoxTemplate>
+        </Card>
     );
 }

@@ -1,31 +1,28 @@
 import { Fragment } from 'react';
 
-import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
+import { Card } from '@components/ui/Card';
+import { ExternalLink } from '@components/ui/ExternalLink';
 
 export interface Venue {
     name: string;
     link: string;
 }
 
-export interface PublicationTemplateProps {
+export interface PublicationItemProps {
     title: string;
     authors: { name: string; isHighlighted?: boolean }[];
     venues: Venue[];
 }
 
-export function PublicationTemplate({ title, authors, venues }: PublicationTemplateProps) {
+export function PublicationItem({ title, authors, venues }: PublicationItemProps) {
     const primaryLink = venues[0].link;
 
     return (
-        <WhiteBoxTemplate>
+        <Card>
             <div className="mb-1">
-                <a
-                    href={primaryLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-bold text-blue-600 hover:underline">
+                <ExternalLink href={primaryLink} className="font-bold text-blue-600 hover:underline">
                     {title}
-                </a>
+                </ExternalLink>
             </div>
             <div className="mb-1 text-gray-700">
                 {authors.map((author, index) => (
@@ -38,17 +35,11 @@ export function PublicationTemplate({ title, authors, venues }: PublicationTempl
             <div>
                 {venues.map((venue, index) => (
                     <span key={venue.link}>
-                        <a
-                            href={venue.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline">
-                            {venue.name}
-                        </a>
+                        <ExternalLink href={venue.link}>{venue.name}</ExternalLink>
                         {index < venues.length - 1 && <span className="p-2 text-gray-700">|</span>}
                     </span>
                 ))}
             </div>
-        </WhiteBoxTemplate>
+        </Card>
     );
 }

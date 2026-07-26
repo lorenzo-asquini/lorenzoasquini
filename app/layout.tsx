@@ -3,9 +3,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import type { Metadata } from 'next';
 
-import '@styles/global.css';
+import './globals.css';
 
-import { Navbar } from '@components/Navbar';
+import { Navbar } from '@components/layout/Navbar';
 
 config.autoAddCss = false;
 

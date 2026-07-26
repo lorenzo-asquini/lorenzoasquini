@@ -1,5 +1,5 @@
-import { SectionTemplate } from '@components/home/templates/SectionTemplate';
-import { EducationTemplate } from '@components/home/templates/EducationTemplate';
+import { Section } from '@components/ui/Section';
+import { EducationItem } from '@components/home/EducationItem';
 
 export function Education() {
     const masterETH = {
@@ -34,26 +34,9 @@ export function Education() {
     };
 
     return (
-        <SectionTemplate title="Education">
-            <EducationTemplate
-                educationType={masterETH.educationType}
-                place={masterETH.place}
-                startDate={masterETH.startDate}
-                endDate={masterETH.endDate}
-                relevantCourses={masterETH.relevantCourses}
-            />
-
-            <EducationTemplate
-                educationType={bachelorUNIPD.educationType}
-                place={bachelorUNIPD.place}
-                startDate={bachelorUNIPD.startDate}
-                endDate={bachelorUNIPD.endDate}
-                finalScore={bachelorUNIPD.finalScore}
-                thesis={bachelorUNIPD.thesis}
-                thesisSupervisor={bachelorUNIPD.thesisSupervisor}
-                gpa={bachelorUNIPD.gpa}
-                relevantCourses={bachelorUNIPD.relevantCourses}
-            />
-        </SectionTemplate>
+        <Section title="Education">
+            <EducationItem {...masterETH} />
+            <EducationItem {...bachelorUNIPD} />
+        </Section>
     );
 }

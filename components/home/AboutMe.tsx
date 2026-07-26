@@ -1,25 +1,19 @@
-import { SectionTemplate } from '@components/home/templates/SectionTemplate';
-import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
+import { Section } from '@components/ui/Section';
+import { Card } from '@components/ui/Card';
+import { ExternalLink } from '@components/ui/ExternalLink';
 
 export function AboutMe() {
     return (
-        <SectionTemplate title="About Me">
-            <WhiteBoxTemplate>
+        <Section title="About Me">
+            <Card>
                 I am a Computer Science Master's student at
-                <a
-                    href="https://ethz.ch/en.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline">
-                    {' '}
-                    ETH Zurich
-                </a>
-                , pursuing a major in Data Management Systems and a minor in Information Security.
+                <ExternalLink href="https://ethz.ch/en.html">{' '}ETH Zurich</ExternalLink>, pursuing a major in Data
+                Management Systems and a minor in Information Security.
                 <br className="mb-4" />
                 My focus is on software-hardware co-design and developing hardware-specific software to maximize
                 efficiency and speed. I am also interested in applying these computing techniques to solve complex
                 problems in finance.
-            </WhiteBoxTemplate>
-        </SectionTemplate>
+            </Card>
+        </Section>
     );
 }

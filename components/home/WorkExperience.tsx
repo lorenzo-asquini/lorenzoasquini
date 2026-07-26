@@ -1,9 +1,9 @@
-import { SectionTemplate } from '@components/home/templates/SectionTemplate';
-import { JobTemplate } from '@components/home/templates/JobTemplate';
+import { Section } from '@components/ui/Section';
+import { JobItem } from '@components/home/JobItem';
 
-import OptiverLogo from './images/OptiverLogo.svg';
-import ETHLogo from './images/ETHLogo.svg';
-import SyntharaLogo from './images/SyntharaLogo.svg';
+import OptiverLogo from './logos/OptiverLogo.svg';
+import ETHLogo from './logos/ETHLogo.svg';
+import SyntharaLogo from './logos/SyntharaLogo.svg';
 
 export function WorkExperience() {
     const optiverInternJob = {
@@ -48,42 +48,10 @@ export function WorkExperience() {
     };
 
     return (
-        <SectionTemplate title="Work Experience">
-            <JobTemplate
-                companyLogoSrc={optiverInternJob.companyLogoSrc}
-                companyName={optiverInternJob.companyName}
-                companyWebsiteUrl={optiverInternJob.companyWebsiteUrl}
-                location={optiverInternJob.location}
-                jobTitle={optiverInternJob.jobTitle}
-                employmentType={optiverInternJob.employmentType}
-                startDate={optiverInternJob.startDate}
-                endDate={optiverInternJob.endDate}
-                tasks={optiverInternJob.tasks}
-            />
-
-            <JobTemplate
-                companyLogoSrc={ethTAJob.companyLogoSrc}
-                companyName={ethTAJob.companyName}
-                companyWebsiteUrl={ethTAJob.companyWebsiteUrl}
-                location={ethTAJob.location}
-                jobTitle={ethTAJob.jobTitle}
-                employmentType={ethTAJob.employmentType}
-                startDate={ethTAJob.startDate}
-                endDate={ethTAJob.endDate}
-                tasks={ethTAJob.tasks}
-            />
-
-            <JobTemplate
-                companyLogoSrc={syntharaInternJob.companyLogoSrc}
-                companyName={syntharaInternJob.companyName}
-                companyWebsiteUrl={syntharaInternJob.companyWebsiteUrl}
-                location={syntharaInternJob.location}
-                jobTitle={syntharaInternJob.jobTitle}
-                employmentType={syntharaInternJob.employmentType}
-                startDate={syntharaInternJob.startDate}
-                endDate={syntharaInternJob.endDate}
-                tasks={syntharaInternJob.tasks}
-            />
-        </SectionTemplate>
+        <Section title="Work Experience">
+            <JobItem {...optiverInternJob} />
+            <JobItem {...ethTAJob} />
+            <JobItem {...syntharaInternJob} />
+        </Section>
     );
 }

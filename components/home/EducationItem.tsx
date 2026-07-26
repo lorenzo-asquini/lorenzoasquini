@@ -1,6 +1,7 @@
-import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
+import { Card } from '@components/ui/Card';
+import { ExternalLink } from '@components/ui/ExternalLink';
 
-export interface EducationTemplateProps {
+export interface EducationItemProps {
     educationType: string;
     place: string;
     startDate: string;
@@ -13,7 +14,7 @@ export interface EducationTemplateProps {
     relevantCourses?: string[];
 }
 
-export function EducationTemplate({
+export function EducationItem({
     educationType,
     place,
     startDate,
@@ -23,9 +24,9 @@ export function EducationTemplate({
     thesis,
     thesisSupervisor,
     relevantCourses,
-}: EducationTemplateProps) {
+}: EducationItemProps) {
     return (
-        <WhiteBoxTemplate>
+        <Card>
             <div>
                 <h3 className="text-xl font-bold text-gray-800">{educationType}</h3>
                 <p className="text-gray-600">{place}</p>
@@ -43,26 +44,13 @@ export function EducationTemplate({
             <div className="mt-4">
                 {thesis && (
                     <p className="text-gray-600 font-bold">
-                        Thesis:{' '}
-                        <a
-                            href={thesis.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline">
-                            {thesis.title}
-                        </a>
+                        Thesis: <ExternalLink href={thesis.link}>{thesis.title}</ExternalLink>
                     </p>
                 )}
                 {thesisSupervisor && (
                     <p className="text-gray-600 font-semibold">
                         Thesis Supervisor:{' '}
-                        <a
-                            href={thesisSupervisor.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 hover:underline">
-                            {thesisSupervisor.name}
-                        </a>
+                        <ExternalLink href={thesisSupervisor.link}>{thesisSupervisor.name}</ExternalLink>
                     </p>
                 )}
             </div>
@@ -72,6 +60,6 @@ export function EducationTemplate({
                     <p className="text-gray-700">{relevantCourses.join(', ')}</p>
                 </div>
             )}
-        </WhiteBoxTemplate>
+        </Card>
     );
 }

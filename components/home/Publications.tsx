@@ -1,8 +1,8 @@
-import { SectionTemplate } from '@components/home/templates/SectionTemplate';
-import { PublicationTemplate } from '@components/home/templates/PublicationTemplate';
+import { Section } from '@components/ui/Section';
+import { PublicationItem } from '@components/home/PublicationItem';
 
 export function Publications() {
-    const placeholder = {
+    const publication = {
         title: 'Accelerating Triangle Counting with Real Processing-in-Memory Systems',
         authors: [
             { name: 'Lorenzo Asquini', isHighlighted: true },
@@ -19,8 +19,8 @@ export function Publications() {
     };
 
     return (
-        <SectionTemplate title="Publications">
-            <PublicationTemplate title={placeholder.title} authors={placeholder.authors} venues={placeholder.venues} />
-        </SectionTemplate>
+        <Section title="Publications">
+            <PublicationItem {...publication} />
+        </Section>
     );
 }

@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 import '@styles/global.css';
 
-import Navbar from '@components/Navbar';
+import { Navbar } from '@components/Navbar';
 
 config.autoAddCss = false;
 

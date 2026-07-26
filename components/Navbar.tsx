@@ -1,39 +1,44 @@
 'use client';
+
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 
-export default function Navbar() {
-    const [isDropdownMenuOpen, setisDropdownMenuOpen] = useState(false);
+export function Navbar() {
+    const [isDropdownMenuOpen, setIsDropdownMenuOpen] = useState(false);
     const navbarRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Close dropdown menu if screen gets bigger
         function handleResize() {
             if (window.innerWidth >= 768) {
-                setisDropdownMenuOpen(false);
-            }
-        }
-
-        // Close dropdown menu if click on page
-        function handleClickOutside(event: MouseEvent) {
-            if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
-                setisDropdownMenuOpen(false);
+                setIsDropdownMenuOpen(false);
             }
         }
 
         window.addEventListener('resize', handleResize);
-        if (isDropdownMenuOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-        }
-
         return () => {
             window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isDropdownMenuOpen) {
+            return;
+        }
+
+        function handleClickOutside(event: MouseEvent) {
+            if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+                setIsDropdownMenuOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isDropdownMenuOpen]);
 
     const closeDropdown = () => {
-        setisDropdownMenuOpen(false);
+        setIsDropdownMenuOpen(false);
     };
 
     return (
@@ -60,7 +65,7 @@ export default function Navbar() {
 
                     <div className="md:hidden flex items-center">
                         <button
-                            onClick={() => setisDropdownMenuOpen(!isDropdownMenuOpen)}
+                            onClick={() => setIsDropdownMenuOpen(!isDropdownMenuOpen)}
                             aria-label="Toggle Menu"
                             className="outline-none focus:outline-none">
                             <svg

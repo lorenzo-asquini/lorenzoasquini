@@ -1,17 +1,17 @@
-import WhiteBoxTemplate from '@components/WhiteBoxTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
-interface PrizeProps {
+export interface PrizeTemplateProps {
     title: string;
     year: string;
     issuer: string;
     description: string;
 }
 
-export default function PrizeTemplate({ title, year, issuer, description }: PrizeProps) {
+export function PrizeTemplate({ title, year, issuer, description }: PrizeTemplateProps) {
     return (
         <WhiteBoxTemplate>
             <div className="mb-4">
-                <p className="text-xl font-bold text-gray-800">{title}</p>
+                <h3 className="text-xl font-bold text-gray-800">{title}</h3>
                 <p className="text-gray-600">
                     {year} | {issuer}
                 </p>

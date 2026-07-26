@@ -1,7 +1,7 @@
-import SectionTemplate from './templates/SectionTemplate';
-import EducationTemplate from './templates/EducationTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { EducationTemplate } from '@components/home/templates/EducationTemplate';
 
-export default function Education() {
+export function Education() {
     const masterETH = {
         educationType: 'Master in Computer Science',
         place: 'ETH Zürich, Zürich, Switzerland',

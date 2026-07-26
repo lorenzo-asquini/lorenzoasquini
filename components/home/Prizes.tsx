@@ -1,7 +1,7 @@
-import SectionTemplate from './templates/SectionTemplate';
-import PrizeTemplate from './templates/PrizeTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { PrizeTemplate } from '@components/home/templates/PrizeTemplate';
 
-export default function Prizes() {
+export function Prizes() {
     const premioAtena = {
         title: 'Premio Atena',
         year: '2022',

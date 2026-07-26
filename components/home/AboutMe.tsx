@@ -1,12 +1,16 @@
-import SectionTemplate from './templates/SectionTemplate';
-import WhiteBoxTemplate from '../WhiteBoxTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
-export default function AboutMe() {
+export function AboutMe() {
     return (
         <SectionTemplate title="About Me">
             <WhiteBoxTemplate>
                 I am a Computer Science Master's student at
-                <a href="https://ethz.ch/en.html" className="text-blue-600 hover:text-blue-800">
+                <a
+                    href="https://ethz.ch/en.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline">
                     {' '}
                     ETH Zurich
                 </a>

@@ -1,6 +1,6 @@
-import WhiteBoxTemplate from '@components/WhiteBoxTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
-interface EducationProps {
+export interface EducationTemplateProps {
     educationType: string;
     place: string;
     startDate: string;
@@ -13,7 +13,7 @@ interface EducationProps {
     relevantCourses?: string[];
 }
 
-export default function EducationTemplate({
+export function EducationTemplate({
     educationType,
     place,
     startDate,
@@ -23,11 +23,11 @@ export default function EducationTemplate({
     thesis,
     thesisSupervisor,
     relevantCourses,
-}: EducationProps) {
+}: EducationTemplateProps) {
     return (
         <WhiteBoxTemplate>
             <div>
-                <h2 className="text-xl font-bold text-gray-800">{educationType}</h2>
+                <h3 className="text-xl font-bold text-gray-800">{educationType}</h3>
                 <p className="text-gray-600">{place}</p>
                 <p className="text-gray-600">
                     {startDate} - {endDate}

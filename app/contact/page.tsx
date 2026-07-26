@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import WhiteBoxTemplate from '@components/WhiteBoxTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
 export default function Contact() {
     return (
@@ -23,6 +22,8 @@ export default function Contact() {
                         <li>
                             <a
                                 href="https://github.com/lorenzo-asquini"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center text-black hover:text-gray-500">
                                 <FontAwesomeIcon icon={faGithub} size="2x" className="mr-4 text-gray-700" />
                                 github.com/lorenzo-asquini
@@ -31,6 +32,8 @@ export default function Contact() {
                         <li>
                             <a
                                 href="https://www.linkedin.com/in/lorenzo-asquini/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center text-black hover:text-gray-500">
                                 <FontAwesomeIcon icon={faLinkedin} size="2x" className="mr-4 text-gray-700" />
                                 linkedin.com/in/lorenzo-asquini

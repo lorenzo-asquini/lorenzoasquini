@@ -1,19 +1,19 @@
 import Link from 'next/link';
 
-import WhiteBoxTemplate from '@components/WhiteBoxTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
-interface PostProps {
+export interface PostTemplateProps {
     title: string;
     description: string;
     slug: string;
 }
 
-export default function PostTemplate({ title, description, slug }: PostProps) {
+export function PostTemplate({ title, description, slug }: PostTemplateProps) {
     return (
         <Link href={`/posts/${slug}`}>
-            <WhiteBoxTemplate hoverEffect={true}>
+            <WhiteBoxTemplate hoverEffect>
                 <div>
-                    <h2 className="text-xl font-bold text-gray-800 mb-4">{title}</h2>
+                    <h3 className="text-xl font-bold text-gray-800 mb-4">{title}</h3>
                     <p className="text-gray-600">{description}</p>
                 </div>
             </WhiteBoxTemplate>

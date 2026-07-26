@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars -- Link and Posts back the commented-out posts section below. */
 import Link from 'next/link';
 
-import PhotoContacts from '@components/home/PhotoContacts';
-import AboutMe from '@components/home/AboutMe';
-import WorkExperience from '@components/home/WorkExperience';
-import Publications from '@components/home/Publications';
-import Education from '@components/home/Education';
-import Prizes from '@components/home/Prizes';
-import SelectedProjects from '@components/home/SelectedProjects';
-import Posts from '@components/home/Posts';
-import Footer from '@components/Footer';
+import { PhotoContacts } from '@components/home/PhotoContacts';
+import { AboutMe } from '@components/home/AboutMe';
+import { WorkExperience } from '@components/home/WorkExperience';
+import { Publications } from '@components/home/Publications';
+import { Education } from '@components/home/Education';
+import { Prizes } from '@components/home/Prizes';
+import { SelectedProjects } from '@components/home/SelectedProjects';
+import { Posts } from '@components/home/Posts';
+import { Footer } from '@components/Footer';
 
 export default function Home() {
     return (
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             */}
 
-            <Footer lastUpdated="2026-01-30"></Footer>
+            <Footer lastUpdated="2026-01-30" />
         </div>
     );
 }

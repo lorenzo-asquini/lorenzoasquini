@@ -1,19 +1,19 @@
 import { Fragment } from 'react';
 
-import WhiteBoxTemplate from '../../WhiteBoxTemplate';
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
 
-interface Venue {
+export interface Venue {
     name: string;
     link: string;
 }
 
-interface PublicationProps {
+export interface PublicationTemplateProps {
     title: string;
     authors: { name: string; isHighlighted?: boolean }[];
     venues: Venue[];
 }
 
-export default function PublicationTemplate({ title, authors, venues }: PublicationProps) {
+export function PublicationTemplate({ title, authors, venues }: PublicationTemplateProps) {
     const primaryLink = venues[0].link;
 
     return (
@@ -29,7 +29,7 @@ export default function PublicationTemplate({ title, authors, venues }: Publicat
             </div>
             <div className="mb-1 text-gray-700">
                 {authors.map((author, index) => (
-                    <Fragment key={index}>
+                    <Fragment key={author.name}>
                         <span className={author.isHighlighted ? 'font-bold underline' : ''}>{author.name}</span>
                         {index < authors.length - 1 && ', '}
                     </Fragment>
@@ -42,7 +42,7 @@ export default function PublicationTemplate({ title, authors, venues }: Publicat
                             href={venue.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-700 hover:underline">
+                            className="text-blue-600 hover:underline">
                             {venue.name}
                         </a>
                         {index < venues.length - 1 && <span className="p-2 text-gray-700">|</span>}

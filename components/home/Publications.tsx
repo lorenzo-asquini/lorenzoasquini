@@ -1,7 +1,7 @@
-import SectionTemplate from './templates/SectionTemplate';
-import PublicationTemplate from './templates/PublicationTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { PublicationTemplate } from '@components/home/templates/PublicationTemplate';
 
-export default function Publications() {
+export function Publications() {
     const placeholder = {
         title: 'Accelerating Triangle Counting with Real Processing-in-Memory Systems',
         authors: [

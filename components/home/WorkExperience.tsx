@@ -1,11 +1,11 @@
-import SectionTemplate from './templates/SectionTemplate';
-import JobTemplate from './templates/JobTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { JobTemplate } from '@components/home/templates/JobTemplate';
 
 import OptiverLogo from './images/OptiverLogo.svg';
 import ETHLogo from './images/ETHLogo.svg';
 import SyntharaLogo from './images/SyntharaLogo.svg';
 
-export default function WorkExperience() {
+export function WorkExperience() {
     const optiverInternJob = {
         companyLogoSrc: OptiverLogo,
         companyName: 'Optiver',

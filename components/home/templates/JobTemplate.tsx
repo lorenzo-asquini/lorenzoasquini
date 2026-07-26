@@ -1,10 +1,11 @@
 import { Fragment } from 'react';
-
+import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
-import WhiteBoxTemplate from '../../WhiteBoxTemplate';
 
-interface JobProps {
-    companyLogoSrc: string;
+import { WhiteBoxTemplate } from '@components/WhiteBoxTemplate';
+
+export interface JobTemplateProps {
+    companyLogoSrc: string | StaticImageData;
     companyName: string;
     companyWebsiteUrl: string;
     location: string;
@@ -17,7 +18,7 @@ interface JobProps {
     tasks: string[];
 }
 
-export default function JobTemplate({
+export function JobTemplate({
     companyLogoSrc,
     companyName,
     companyWebsiteUrl,
@@ -27,7 +28,7 @@ export default function JobTemplate({
     startDate,
     endDate,
     tasks,
-}: JobProps) {
+}: JobTemplateProps) {
     return (
         <WhiteBoxTemplate>
             <div className="flex">
@@ -50,10 +51,10 @@ export default function JobTemplate({
                         {employmentType} | {startDate} - {endDate}
                     </p>
                     <ul className="list-disc text-gray-700 space-y-2 ml-3">
-                        {tasks.map((task, index) => (
-                            <li key={index}>
+                        {tasks.map((task) => (
+                            <li key={task}>
                                 {task.split('C++').map((part, i, arr) => (
-                                    <Fragment key={i}>
+                                    <Fragment key={`${task}-${i}`}>
                                         {part}
                                         {i < arr.length - 1 && <span className="whitespace-nowrap">C++</span>}
                                     </Fragment>

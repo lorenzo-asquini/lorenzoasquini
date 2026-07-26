@@ -1,7 +1,7 @@
-import SectionTemplate from './templates/SectionTemplate';
-import PostTemplate from './templates/PostTemplate';
+import { SectionTemplate } from '@components/home/templates/SectionTemplate';
+import { PostTemplate } from '@components/home/templates/PostTemplate';
 
-export default function Posts() {
+export function Posts() {
     const postPlaceholder = {
         title: 'Post Title Placeholder',
         description: 'Short Description',

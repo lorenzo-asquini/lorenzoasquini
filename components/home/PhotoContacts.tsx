@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-
 import Image from 'next/image';
 
 import MyPhoto from './images/myPhoto.png';
 
-export default function PhotoContacts() {
+export function PhotoContacts() {
     const githubLink = 'https://github.com/lorenzo-asquini';
     const linkedInLink = 'https://www.linkedin.com/in/lorenzo-asquini/';
     const emailLink = 'mailto:hi@lorenzoasquini.com';
@@ -25,7 +23,7 @@ export default function PhotoContacts() {
                 <a href={linkedInLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-500">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
-                <a href={emailLink} target="_blank" rel="noopener noreferrer" className="hover:text-gray-500">
+                <a href={emailLink} className="hover:text-gray-500">
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                 </a>
             </div>

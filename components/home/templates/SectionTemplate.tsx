@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
-interface SectionProps {
+export interface SectionTemplateProps {
     title: string;
     children: ReactNode;
 }
 
-export default function SectionTemplate({ title, children }: SectionProps) {
+export function SectionTemplate({ title, children }: SectionTemplateProps) {
     return (
         <div className="mx-auto pt-6 px-3 max-w-3xl">
-            <h1 className="text-left text-xl font-bold pb-4">{title}</h1>
+            <h2 className="text-left text-xl font-bold pb-4">{title}</h2>
             <div className="text-justify text-base">{children}</div>
         </div>
     );

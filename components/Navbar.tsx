@@ -53,11 +53,6 @@ export function Navbar() {
                         <Link href="/" className="mx-4 hover:text-gray-300">
                             HOME
                         </Link>
-                        {/* //TODO
-                        <Link href="/posts/" className="mx-4 hover:text-gray-300">
-                            POSTS
-                        </Link>
-                        */}
                         <Link href="/contact/" className="mx-4 hover:text-gray-300">
                             CONTACT
                         </Link>

@@ -33,16 +33,6 @@ export function Education() {
         relevantCourses: ['Algorithms for Engineering', 'Computer Architecture', 'Operating Systems'],
     };
 
-    // Leaving this here even though it is not displayed
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const highSchool = {
-        educationType: 'High School Diploma',
-        place: 'Liceo Scientifico Niccolò Copernico, Udine, Italy',
-        startDate: 'September 2015',
-        endDate: 'June 2020',
-        finalScore: '100/100 cum Laude',
-    };
-
     return (
         <SectionTemplate title="Education">
             <EducationTemplate

@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import type { ReactNode } from 'react';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
@@ -6,7 +6,7 @@ import { Card } from '@components/ui/Card';
 import { ExternalLink } from '@components/ui/ExternalLink';
 
 export interface JobItemProps {
-    companyLogoSrc: string | StaticImageData;
+    companyLogoSrc: StaticImageData | string;
     companyName: string;
     companyWebsiteUrl: string;
     location: string;
@@ -16,7 +16,7 @@ export interface JobItemProps {
     startDate: string;
     endDate: string;
 
-    tasks: string[];
+    tasks: ReactNode[];
 }
 
 export function JobItem({
@@ -33,14 +33,8 @@ export function JobItem({
     return (
         <Card>
             <div className="flex gap-4">
-                <div className="size-8 mt-1 flex-shrink-0 relative">
-                    <Image
-                        priority
-                        src={companyLogoSrc}
-                        alt={companyName}
-                        fill
-                        className="object-contain object-left"
-                    />
+                <div className="relative size--8 mt-1 shrink-0">
+                    <Image priority src={companyLogoSrc} alt="" fill className="object-contain object-left" />
                 </div>
                 <div className="min-w-0">
                     <ExternalLink href={companyWebsiteUrl} className="text-xl font-bold text-blue-600 hover:underline">
@@ -53,15 +47,8 @@ export function JobItem({
                         {employmentType} | {startDate} - {endDate}
                     </p>
                     <ul className="list-disc text-gray-700 space-y-2 ml-3">
-                        {tasks.map((task) => (
-                            <li key={task}>
-                                {task.split('C++').map((part, i, arr) => (
-                                    <Fragment key={`${task}-${i}`}>
-                                        {part}
-                                        {i < arr.length - 1 && <span className="whitespace-nowrap">C++</span>}
-                                    </Fragment>
-                                ))}
-                            </li>
+                        {tasks.map((task, index) => (
+                            <li key={index}>{task}</li>
                         ))}
                     </ul>
                 </div>

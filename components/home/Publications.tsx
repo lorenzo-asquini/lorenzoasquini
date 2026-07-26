@@ -1,8 +1,8 @@
 import { Section } from '@components/ui/Section';
-import { PublicationItem } from '@components/home/PublicationItem';
+import { PublicationItem, type PublicationItemProps } from '@components/home/PublicationItem';
 
 export function Publications() {
-    const publication = {
+    const triangleCounting: PublicationItemProps = {
         title: 'Accelerating Triangle Counting with Real Processing-in-Memory Systems',
         authors: [
             { name: 'Lorenzo Asquini', isHighlighted: true },
@@ -20,7 +20,7 @@ export function Publications() {
 
     return (
         <Section title="Publications">
-            <PublicationItem {...publication} />
+            <PublicationItem {...triangleCounting} />
         </Section>
     );
 }

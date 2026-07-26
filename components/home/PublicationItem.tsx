@@ -11,21 +11,19 @@ export interface Venue {
 export interface PublicationItemProps {
     title: string;
     authors: { name: string; isHighlighted?: boolean }[];
-    venues: Venue[];
+    venues: [Venue, ...Venue[]];
 }
 
 export function PublicationItem({ title, authors, venues }: PublicationItemProps) {
-    const primaryLink = venues[0].link;
-
     return (
         <Card>
-            <ExternalLink href={primaryLink} className="text-xl font-bold text-blue-600 hover:underline">
+            <ExternalLink href={venues[0].link} className="text-xl font-bold text-blue-600 hover:underline">
                 {title}
             </ExternalLink>
             <p className="mt-1 text-gray-700">
                 {authors.map((author, index) => (
                     <Fragment key={author.name}>
-                        <span className={author.isHighlighted ? 'font-bold underline' : ''}>{author.name}</span>
+                        <span className={author.isHighlighted ? 'font-bold underline' : undefined}>{author.name}</span>
                         {index < authors.length - 1 && ', '}
                     </Fragment>
                 ))}

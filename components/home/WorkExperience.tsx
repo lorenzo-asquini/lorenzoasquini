@@ -1,4 +1,5 @@
 import { Section } from '@components/ui/Section';
+import { NoWrap } from '@components/ui/NoWrap';
 import { JobItem } from '@components/home/JobItem';
 
 import OptiverLogo from './logos/OptiverLogo.svg';
@@ -9,7 +10,7 @@ export function WorkExperience() {
     const optiverInternJob = {
         companyLogoSrc: OptiverLogo,
         companyName: 'Optiver',
-        companyWebsiteUrl: 'https://optiver.com//',
+        companyWebsiteUrl: 'https://optiver.com/',
         location: 'Amsterdam, NL',
         jobTitle: 'Software Engineer Intern',
         employmentType: 'Internship',
@@ -19,6 +20,7 @@ export function WorkExperience() {
             'I worked on designing and implementing a server to automate trade confirmations using the FIX protocol, saving tens of minutes daily and reducing errors in trade handling.',
         ],
     };
+
     const ethTAJob = {
         companyLogoSrc: ETHLogo,
         companyName: 'ETH Zürich',
@@ -32,6 +34,7 @@ export function WorkExperience() {
             'I was responsible for helping prepare and grade homework assignments for the Advanced Systems Lab course.',
         ],
     };
+
     const syntharaInternJob = {
         companyLogoSrc: SyntharaLogo,
         companyName: 'Synthara',
@@ -42,8 +45,16 @@ export function WorkExperience() {
         startDate: 'June 2024',
         endDate: 'September 2024',
         tasks: [
-            "I worked on implementing and integrating multiple features in a functional simulation model written in C++ to accurately replicate Synthara's custom hardware behavior.",
-            "I was responsible for designing, implementing, and deploying automated tests written in C++ to verify the proper functionality of Synthara's custom hardware.",
+            <>
+                I worked on implementing and integrating multiple features in a functional simulation model written in
+                <NoWrap>C++</NoWrap>
+                to accurately replicate Synthara's custom hardware behavior.
+            </>,
+            <>
+                I was responsible for designing, implementing, and deploying automated tests written in
+                <NoWrap>C++</NoWrap>
+                to verify the proper functionality of Synthara's custom hardware.
+            </>,
         ],
     };
 

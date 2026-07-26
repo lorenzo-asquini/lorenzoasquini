@@ -62,7 +62,7 @@ export function Navbar() {
                         <button
                             onClick={() => setIsDropdownMenuOpen(!isDropdownMenuOpen)}
                             aria-label="Toggle Menu"
-                            className="outline-none focus:outline-none">
+                            className="cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="24"
@@ -100,7 +100,7 @@ export function Navbar() {
                         </Link>
                         <Link
                             href="/contact/"
-                            className="w-full border-b p-4 hover:bg-gray-700"
+                            className="w-full border-b border-gray-700 p-4 hover:bg-gray-700"
                             onClick={closeDropdown}>
                             CONTACT
                         </Link>

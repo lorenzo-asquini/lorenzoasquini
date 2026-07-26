@@ -33,7 +33,7 @@ export function JobItem({
     return (
         <Card>
             <div className="flex gap-4">
-                <div className="size-8 mt-2 flex-shrink-0 relative">
+                <div className="size-8 mt-1 flex-shrink-0 relative">
                     <Image
                         priority
                         src={companyLogoSrc}
@@ -42,7 +42,7 @@ export function JobItem({
                         className="object-contain object-left"
                     />
                 </div>
-                <div>
+                <div className="min-w-0">
                     <ExternalLink href={companyWebsiteUrl} className="text-xl font-bold text-blue-600 hover:underline">
                         {companyName}
                     </ExternalLink>

@@ -5,5 +5,5 @@ export interface CardProps {
 }
 
 export function Card({ children }: CardProps) {
-    return <div className="block text-justify bg-white shadow-lg rounded-lg p-4 my-3">{children}</div>;
+    return <div className="block text-left bg-white shadow-lg rounded-lg p-4 my-3">{children}</div>;
 }

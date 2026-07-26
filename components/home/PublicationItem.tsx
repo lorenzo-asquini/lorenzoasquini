@@ -19,27 +19,25 @@ export function PublicationItem({ title, authors, venues }: PublicationItemProps
 
     return (
         <Card>
-            <div className="mb-1">
-                <ExternalLink href={primaryLink} className="font-bold text-blue-600 hover:underline">
-                    {title}
-                </ExternalLink>
-            </div>
-            <div className="mb-1 text-gray-700">
+            <ExternalLink href={primaryLink} className="text-xl font-bold text-blue-600 hover:underline">
+                {title}
+            </ExternalLink>
+            <p className="mt-1 text-gray-700">
                 {authors.map((author, index) => (
                     <Fragment key={author.name}>
                         <span className={author.isHighlighted ? 'font-bold underline' : ''}>{author.name}</span>
                         {index < authors.length - 1 && ', '}
                     </Fragment>
                 ))}
-            </div>
-            <div>
+            </p>
+            <p className="mt-1 text-gray-500">
                 {venues.map((venue, index) => (
-                    <span key={venue.link}>
+                    <Fragment key={venue.link}>
                         <ExternalLink href={venue.link}>{venue.name}</ExternalLink>
-                        {index < venues.length - 1 && <span className="p-2 text-gray-700">|</span>}
-                    </span>
+                        {index < venues.length - 1 && <span className="mx-2 text-gray-400">|</span>}
+                    </Fragment>
                 ))}
-            </div>
+            </p>
         </Card>
     );
 }

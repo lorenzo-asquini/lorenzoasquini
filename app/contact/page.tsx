@@ -1,9 +1,16 @@
+import type { Metadata } from 'next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { Card } from '@components/ui/Card';
 import { ExternalLink } from '@components/ui/ExternalLink';
+import { EMAIL_HREF, LINKS } from '@data/links';
+
+export const metadata: Metadata = {
+    title: 'Contact',
+    description: 'Where you can find Lorenzo Asquini',
+};
 
 export default function Contact() {
     return (
@@ -13,27 +20,25 @@ export default function Contact() {
                 <Card>
                     <ul className="text-lg space-y-8">
                         <li>
-                            <a
-                                href="mailto:hi@lorenzoasquini.com"
-                                className="flex items-center text-black hover:text-gray-500">
+                            <a href={EMAIL_HREF} className="flex items-center text-black hover:text-gray-500">
                                 <FontAwesomeIcon icon={faEnvelope} size="2x" className="mr-4 text-gray-700" />
-                                hi@lorenzoasquini.com
+                                {LINKS.email}
                             </a>
                         </li>
                         <li>
                             <ExternalLink
-                                href="https://github.com/lorenzo-asquini"
+                                href={LINKS.linkedin}
                                 className="flex items-center text-black hover:text-gray-500">
-                                <FontAwesomeIcon icon={faGithub} size="2x" className="mr-4 text-gray-700" />
-                                github.com/lorenzo-asquini
+                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mr-4 text-gray-700" />
+                                linkedin.com/in/lorenzo-asquini
                             </ExternalLink>
                         </li>
                         <li>
                             <ExternalLink
-                                href="https://www.linkedin.com/in/lorenzo-asquini/"
+                                href={LINKS.github}
                                 className="flex items-center text-black hover:text-gray-500">
-                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="mr-4 text-gray-700" />
-                                linkedin.com/in/lorenzo-asquini
+                                <FontAwesomeIcon icon={faGithub} size="2x" className="mr-4 text-gray-700" />
+                                github.com/lorenzo-asquini
                             </ExternalLink>
                         </li>
                     </ul>

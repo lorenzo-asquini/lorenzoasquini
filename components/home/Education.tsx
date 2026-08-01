@@ -1,42 +1,62 @@
+import { Card } from '@components/ui/Card';
+import { ExternalLink } from '@components/ui/ExternalLink';
 import { Section } from '@components/ui/Section';
-import { EducationItem } from '@components/home/EducationItem';
+import { EDUCATION } from '@data/education';
+
+export interface EducationItemProps {
+    educationType: string;
+    place: string;
+    startDate: string;
+    endDate: string;
+
+    grade?: string;
+    thesis?: { title: string; link: string };
+    relevantCourses: string[];
+}
+
+function EducationItem({
+    educationType,
+    place,
+    startDate,
+    endDate,
+    grade,
+    thesis,
+    relevantCourses,
+}: EducationItemProps) {
+    return (
+        <Card>
+            <h3 className="text-xl font-bold text-gray-800">{educationType}</h3>
+            <p className="text-gray-700">{place}</p>
+            <p className="text-gray-500">
+                {startDate} - {endDate}
+            </p>
+            {grade && (
+                <p className="text-gray-500">
+                    <span className="font-semibold">Grade:</span> {grade}
+                </p>
+            )}
+
+            <div className="mt-3 space-y-1 text-gray-700">
+                {thesis && (
+                    <p>
+                        <span className="font-semibold">Thesis:</span>{' '}
+                        <ExternalLink href={thesis.link}>{thesis.title}</ExternalLink>
+                    </p>
+                )}
+                <p>
+                    <span className="font-semibold">Relevant Courses:</span> {relevantCourses.join(', ')}
+                </p>
+            </div>
+        </Card>
+    );
+}
 
 export function Education() {
-    const masterETH = {
-        educationType: 'Master in Computer Science',
-        place: 'ETH Zürich, Zürich, Switzerland',
-        startDate: 'September 2023',
-        endDate: '2026',
-        relevantCourses: [
-            'Advanced Systems Lab',
-            'Compiler Design',
-            'Computer Architecture',
-            'Design of Parallel and High-Performance Computing',
-        ],
-    };
-
-    const bachelorUNIPD = {
-        educationType: 'Bachelor in Computer Engineering',
-        place: 'Università degli Studi di Padova, Padua, Italy',
-        startDate: 'September 2020',
-        endDate: 'July 2023',
-        finalScore: '110/110 cum Laude',
-        gpa: '29.75/30',
-        thesis: {
-            title: 'Approximate triangle counting with vertex coloring on the UPMEM architecture',
-            link: 'https://thesis.unipd.it/handle/20.500.12608/48323',
-        },
-        thesisSupervisor: {
-            name: 'Francesco Silvestri',
-            link: 'https://www.dei.unipd.it/~silvestri/',
-        },
-        relevantCourses: ['Algorithms for Engineering', 'Computer Architecture', 'Operating Systems'],
-    };
-
     return (
         <Section title="Education">
-            <EducationItem {...masterETH} />
-            <EducationItem {...bachelorUNIPD} />
+            {EDUCATION.map((education) => (
+                <EducationItem key={education.educationType} {...education} />
+            ))}
         </Section>
     );
 }

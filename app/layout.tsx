@@ -6,20 +6,27 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 import { Navbar } from '@components/layout/Navbar';
+import { Footer } from '@components/layout/Footer';
 
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-    title: 'Lorenzo Asquini',
+    title: {
+        default: 'Lorenzo Asquini',
+        template: '%s | Lorenzo Asquini',
+    },
     description: 'Student at ETH Zürich',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+    const lastUpdated = new Date().toISOString().split('T')[0];
+
     return (
         <html lang="en">
             <body className="bg-gray-100">
                 <Navbar />
-                {children}
+                <main className="pt-20">{children}</main>
+                <Footer lastUpdated={lastUpdated} />
             </body>
         </html>
     );

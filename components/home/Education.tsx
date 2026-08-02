@@ -38,13 +38,14 @@ function EducationItem({
 
             <div className="mt-3 space-y-1 text-gray-700">
                 {thesis && (
-                    <p>
-                        <span className="font-semibold">Thesis:</span>{' '}
+                    <p className="flex gap-1">
+                        <span className="font-semibold shrink-0">Thesis:</span>
                         <ExternalLink href={thesis.link}>{thesis.title}</ExternalLink>
                     </p>
                 )}
-                <p>
-                    <span className="font-semibold">Relevant Courses:</span> {relevantCourses.join(', ')}
+                <p className="flex gap-1">
+                    <span className="font-semibold shrink-0">Relevant Courses:</span>
+                    <span>{relevantCourses.join(', ')}</span>
                 </p>
             </div>
         </Card>

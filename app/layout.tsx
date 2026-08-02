@@ -23,9 +23,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
     return (
         <html lang="en">
-            <body className="bg-gray-100">
+            <body className="bg-gray-100 flex flex-col min-h-screen">
                 <Navbar />
-                <main className="pt-20">{children}</main>
+                <main className="pt-20 flex-grow">{children}</main>
                 <Footer lastUpdated={lastUpdated} />
             </body>
         </html>

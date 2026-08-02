@@ -1,10 +1,36 @@
 import type { JobItemProps } from '@components/home/WorkExperience';
 
-import OptiverLogo from './logos/OptiverLogo.svg';
-import ETHLogo from './logos/ETHLogo.svg';
-import SyntharaLogo from './logos/SyntharaLogo.svg';
+import PascalResearchLogo from './logos/Pascal.svg';
+import RibotLogo from './logos/Ribot.svg';
+import OptiverLogo from './logos/Optiver.svg';
+import ETHLogo from './logos/ETH.svg';
+import SyntharaLogo from './logos/Synthara.svg';
 
 export const JOBS: JobItemProps[] = [
+    {
+        companyLogoSrc: PascalResearchLogo,
+        companyName: 'Pascal Research',
+        companyWebsiteUrl: 'https://pascal.trade/',
+        location: 'Remote',
+        jobTitle: 'Software Engineer',
+        employmentType: 'Full-time',
+        startDate: 'June 2026',
+        endDate: 'Present',
+        tasks: ['Building and maintaining trading and market-making systems in C++ for prediction markets.'],
+    },
+    {
+        companyLogoSrc: RibotLogo,
+        companyName: 'Ribot',
+        companyWebsiteUrl: 'https://ribot.co/',
+        location: 'Remote',
+        jobTitle: 'Technical Co-Founder & Software Engineer',
+        employmentType: 'Part-time',
+        startDate: 'September 2025',
+        endDate: 'April 2026',
+        tasks: [
+            'Designed, implemented, and deployed systems in C++ for continuous trading and low-latency arbitrage across prediction markets, supporting roughly $2.5M in weekly volume.',
+        ],
+    },
     {
         companyLogoSrc: OptiverLogo,
         companyName: 'Optiver',
@@ -15,7 +41,7 @@ export const JOBS: JobItemProps[] = [
         startDate: 'July 2025',
         endDate: 'August 2025',
         tasks: [
-            'I worked on designing and implementing a server to automate trade confirmations using the FIX protocol, saving tens of minutes daily and reducing errors in trade handling.',
+            'Designed and implemented a server automating trade confirmations using the FIX protocol, saving tens of minutes daily and reducing errors in trade handling.',
         ],
     },
     {
@@ -27,9 +53,7 @@ export const JOBS: JobItemProps[] = [
         employmentType: 'Part-time',
         startDate: 'February 2025',
         endDate: 'June 2025',
-        tasks: [
-            'I was responsible for helping prepare and grade homework assignments for the Advanced Systems Lab course.',
-        ],
+        tasks: ['Prepared and graded homework assignments for the Advanced Systems Lab course.'],
     },
     {
         companyLogoSrc: SyntharaLogo,
@@ -41,8 +65,8 @@ export const JOBS: JobItemProps[] = [
         startDate: 'June 2024',
         endDate: 'September 2024',
         tasks: [
-            "I worked on implementing and integrating multiple features in a functional simulation model written in C++ to accurately replicate Synthara's custom hardware behavior.",
-            "I was responsible for designing, implementing, and deploying automated tests written in C++ to verify the proper functionality of Synthara's custom hardware.",
+            "Implemented and integrated multiple features in a functional simulation model written in C++ to accurately replicate Synthara's custom hardware behavior.",
+            "Designed, implemented, and deployed automated tests written in C++ to verify the correct functionality of Synthara's custom hardware.",
         ],
     },
 ];

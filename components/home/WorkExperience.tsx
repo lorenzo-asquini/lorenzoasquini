@@ -8,7 +8,7 @@ import { Section } from '@components/ui/Section';
 import { JOBS } from '@data/jobs';
 
 export interface JobItemProps {
-    companyLogoSrc: StaticImageData | string;
+    companyLogoSrc?: StaticImageData | string;
     companyName: string;
     companyWebsiteUrl: string;
     location: string;
@@ -36,7 +36,9 @@ function JobItem({
         <Card>
             <div className="flex gap-4">
                 <div className="relative size-8 mt-1 shrink-0">
-                    <Image priority src={companyLogoSrc} alt="" fill className="object-contain object-left" />
+                    {companyLogoSrc && (
+                        <Image priority src={companyLogoSrc} alt="" fill className="object-contain object-center" />
+                    )}
                 </div>
                 <div className="min-w-0">
                     <ExternalLink href={companyWebsiteUrl} className="text-xl font-bold text-blue-600 hover:underline">

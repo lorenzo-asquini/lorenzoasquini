@@ -1,5 +1,5 @@
 export const LINKS = {
-    linkedin: 'https://www.linkedin.com/in/lorenzo-asquini/',
+    linkedin: 'https://linkedin.com/in/lorenzo-asquini/',
     github: 'https://github.com/lorenzo-asquini',
     email: 'hi@lorenzoasquini.com',
 } as const;
